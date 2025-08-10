@@ -67,7 +67,6 @@ class Predictor(BasePredictor):
         ),
     ) -> Output:
         """Run a single prediction on the model"""
-        # Check if either filestring, filepath or file is provided, but only 1 of them
         """ if sum([file_string is not None, file_url is not None, file is not None]) != 1:
             raise RuntimeError("Provide either file_string, file or file_url") """
 
@@ -87,7 +86,8 @@ class Predictor(BasePredictor):
                         "1",
                         "-c:a",
                         "pcm_s16le",
-                        temp_wav_filename,
+                        temp_wav_filename
+                        # temp_wavy_filename,
                     ]
                 )
 
